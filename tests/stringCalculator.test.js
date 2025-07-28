@@ -28,4 +28,9 @@ test('throws error when negative numbers are provided', () => {
     expect(() => add("1,-2,3,-4")).toThrow("Negatives not allowed: -2,-4");
 });
 
+test('ignores numbers greater than 1000', () => {
+    expect(add("2,1001,6")).toBe(8);
+});
+
+
   
