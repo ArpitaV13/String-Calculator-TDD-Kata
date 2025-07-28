@@ -7,7 +7,14 @@ function add(numbers){
         delimeter = new RegExp(parts[0].slice(2));
         numbers= parts[1];
     }
-    return numbers.split(delimeter).map(Number).reduce((sum,num)=>(sum+num),0);
+    const nums = numbers.split(delimeter).map(Number);
+    const negatives = nums.filter(n => n < 0);
+
+    if (negatives.length) {
+        throw new Error(`Negatives not allowed: ${negatives.join(",")}`);
+    }
+
+    return nums.reduce((sum, n) => sum + n, 0);
 }
 
 module.exports = {add};
