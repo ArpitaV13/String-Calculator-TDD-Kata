@@ -6,5 +6,9 @@ test('returns 0 for empty string', ()=>{
 
 test('returns number if single number string passed', () => {
     expect(add("5")).toBe(5);
-  });
+});
+
+test('rteurns the sum of two comma separated integers', ()=> {
+    expect(add('1,2')).toBe(3);
+})
   
