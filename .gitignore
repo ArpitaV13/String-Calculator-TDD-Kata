@@ -1,0 +1,8 @@
+# Node.js dependencies
+node_modules/
+
+# Test coverage output
+coverage/
+
+# Editor settings
+.vscode/
